@@ -3,7 +3,7 @@
 
 #include "global.h"   // Global variables
 
-int create_bottom_menu()
+int display_bottom_menu(int function_key)
 {
 	// show what the function keys do at the bottom of the screen
 	// create normal and highlighted (active) view
@@ -11,8 +11,33 @@ int create_bottom_menu()
 	init_pair(2, COLOR_BLACK, COLOR_YELLOW);
 	int pair;
 
-	int active_window = 3;	
+	int active_window;
 
+	// map the function_key pressed to the fkeys index
+	switch(function_key)
+	{
+		case 1:			// F1=Help
+		active_window = 0;
+		break;
+		case 3:			// F3=Exit
+		active_window = 1;
+		break;
+		case 5:			// F5=Radio
+		active_window = 2;
+		break;
+		case 6:			// F5=Local
+		active_window = 3;
+		break;
+		case 7:			// F7=List
+		active_window = 4;
+		break;
+		case 9:			// F9=Silence
+		active_window = 5;
+		break;
+		default:		// nothing chosen at start of program
+		active_window = 99;
+		break;
+	}
 	// array of all function keys
         char * fkeys[6] = {"F1=Help","F3=Exit","F5=Radio","F6=Local","F7=List","F9=Silence"}; 
 

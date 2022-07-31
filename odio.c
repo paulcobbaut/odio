@@ -18,7 +18,7 @@ int main()
 	getmaxyx(stdscr, screen_height, screen_width);
 
 	// display menu at the bottom
-	create_bottom_menu();
+	display_bottom_menu(99);
 
 	// display debug window to test keystrokes
 	create_debug_window();
