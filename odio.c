@@ -4,6 +4,7 @@
 #include "global.h"   // Global variables
 #include "help.h"     // F1-Help
 #include "tmpdebug.h" // Temporary window for debugging
+#include "menu.h"     // The menu at the bottom of the screen
 
 int start_ncurses()
 {
@@ -12,17 +13,6 @@ int start_ncurses()
 	noecho();
 	start_color();
 	keypad(stdscr, TRUE);  // enable keyboard mapping
-}
-
-
-int create_bottom_menu()
-{
-	// show what the function keys do at the bottom of the screen
-	init_pair(1, COLOR_YELLOW, COLOR_BLACK);
-	attron(COLOR_PAIR(1));
-	mvprintw(screen_height - 1, 0, "F1=Help  F3=Exit  F5=Radio  F6=Local  F7=Playlist  F9=Silence");
-	attroff(COLOR_PAIR(1));
-	refresh();
 }
 
 int save_and_exit_this_program()
@@ -48,6 +38,10 @@ int handle_user_input()
 			break;
 			case KEY_F(5):
 			mvwprintw(debug_window, 1, 1, "Playing Radio ... press q to quit     ");
+			wrefresh(debug_window);
+			break;
+			case KEY_F(6):
+			mvwprintw(debug_window, 1, 1, "Playing mp3s ... press q to quit     ");
 			wrefresh(debug_window);
 			break;
 			case KEY_F(7):
