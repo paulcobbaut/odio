@@ -5,23 +5,7 @@
 #include "help.h"     // F1-Help
 #include "tmpdebug.h" // Temporary window for debugging
 #include "menu.h"     // The menu at the bottom of the screen
-
-int start_ncurses()
-{
-	initscr();
-	cbreak();
-	noecho();
-	start_color();
-	keypad(stdscr, TRUE);  // enable keyboard mapping
-}
-
-int save_and_exit_this_program()
-{
-	// todo... save playlist? save config?
-	// end ncurses
-	endwin();
-	exit(0);
-}
+#include "myncurses.h"  // The menu at the bottom of the screen
 
 int handle_user_input()
 {
