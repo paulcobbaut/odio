@@ -5,11 +5,12 @@
 
 int start_ncurses()
 {
-	initscr();
+	initscr();		// init ncurses
 	cbreak();
 	noecho();
-	start_color();
-	keypad(stdscr, TRUE);  // enable keyboard mapping
+	start_color();		// allow colored text
+	keypad(stdscr, TRUE);	// enable keyboard mapping
+	curs_set(0);		// hide the cursor
 }
 
 int save_and_exit_this_program()
