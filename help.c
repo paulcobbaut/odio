@@ -5,11 +5,12 @@
 int display_help_window()
 {
         // create helpful window to explain the program a bit
-	int height = screen_height / 1.5;
-	int width = screen_width / 1.5;
-	int starty = screen_height / 8;
-	int startx = screen_width / 8;
+	int height = screen_height - 2;
+	int width = screen_width - 2;
+	int starty = 0;
+	int startx = 0;
 	help_window = newwin(height, width, starty, startx);
+	werase(help_window);
 	box(help_window, 0, 0);
 	mvwprintw(help_window, 0, 2, "Help");
 	mvwprintw(help_window, 2, (width / 2) - 8, "Welcome to odio.");

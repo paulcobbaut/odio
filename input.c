@@ -4,6 +4,7 @@
 #include "global.h"
 #include "help.h"
 #include "menu.h"
+#include "radio.h"
 #include "myncurses.h"
 
 int handle_user_input()
@@ -22,8 +23,9 @@ int handle_user_input()
 			display_bottom_menu(3);
 			break;
 			case KEY_F(5):
-			mvwprintw(debug_window, 1, 1, "Playing Radio ... press q to quit     ");
-			wrefresh(debug_window);
+			display_radio_window();
+			//mvwprintw(debug_window, 1, 1, "Playing Radio ... press q to quit     ");
+			//wrefresh(debug_window);
 			display_bottom_menu(5);
 			break;
 			case KEY_F(6):
