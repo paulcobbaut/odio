@@ -32,6 +32,9 @@ int handle_user_input()
 			case KEY_F(7):
 			display_bottom_menu(7);
 			break;
+			case KEY_F(8):
+			display_bottom_menu(8);
+			break;
 			case KEY_F(9):
 			display_bottom_menu(9);
 			break;

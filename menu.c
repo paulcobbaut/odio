@@ -31,28 +31,30 @@ int display_bottom_menu(int function_key)
 		case 7:			// F7=List
 		active_window = 4;
 		break;
-		case 9:			// F9=Silence
+		case 8:			// F7=List
 		active_window = 5;
+		break;
+		case 9:			// F9=Silence
+		active_window = 6;
 		break;
 		default:		// nothing chosen at start of program
 		active_window = 99;
 		break;
 	}
 	// array of all function keys
-        char * fkeys[6] = {"F1=Help","F3=Exit","F5=Radio","F6=Local","F7=List","F9=Silence"}; 
+        char * fkeys[7] = {"F1=Help","F3=Exit","F5=Radio","F6=Local","F7=List","F8=News","F9=Silence"}; 
 
-	for (int i = 0; i < 6; i++)
+	// loop through array
+	for (int i = 0; i < 7; i++)
 	{
 		if (i == active_window)
 			pair = 2;
 		else
 			pair = 1; 
-	attron(COLOR_PAIR(pair));
-	mvprintw(screen_height - 1, i * 12, fkeys[i]);
-	attroff(COLOR_PAIR(pair));
+		attron(COLOR_PAIR(pair));
+		mvprintw(screen_height - 1, i * 12, fkeys[i]);
+		attroff(COLOR_PAIR(pair));
 	}
-
-
 	refresh();
 }
 

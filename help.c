@@ -20,9 +20,10 @@ int display_help_window()
 	mvwprintw(help_window,  8, 3, "F5 - Radio   : Displays the screen to select radio stations.");
 	mvwprintw(help_window,  9, 3, "F6 - Local   : Displays the screen to play local audio files.");
 	mvwprintw(help_window, 10, 3, "F7 - List    : Displays the screen to manage a playlist.");
-	mvwprintw(help_window, 11, 3, "F9 - Silence : Mutes all audio.");
-	mvwprintw(help_window, 15, 3, "Odio, Copyright 2022: Paul Cobbaut, GNU GPLv3");
-	mvwprintw(help_window, 16, 3, "Source available at https://github.com/paulcobbaut/odio");
+	mvwprintw(help_window, 11, 3, "F8 - News    : Displays the screen to repeat a news bulletin.");
+	mvwprintw(help_window, 12, 3, "F9 - Silence : Mutes all audio.");
+	mvwprintw(help_window, 16, 3, "Odio, Copyright 2022: Paul Cobbaut, GNU GPLv3");
+	mvwprintw(help_window, 17, 3, "Source available at https://github.com/paulcobbaut/odio");
 	wrefresh(help_window);
 }
 
