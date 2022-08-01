@@ -5,8 +5,8 @@
 int display_help_window()
 {
         // create helpful window to explain the program a bit
-	int height = screen_height - 2;
-	int width = screen_width - 2;
+	int height = screen_height - 1;
+	int width = screen_width;
 	int starty = 0;
 	int startx = 0;
 	help_window = newwin(height, width, starty, startx);
