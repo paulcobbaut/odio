@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <string.h>
 #include <ncurses.h>
 
 #include "global.h"   // Global variables
@@ -6,7 +7,6 @@
 #include "menu.h"     // The menu at the bottom of the screen
 #include "input.h"     // handle user input
 #include "myncurses.h"  // The menu at the bottom of the screen
-
 
 int main()
 {

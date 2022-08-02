@@ -11,15 +11,15 @@ int display_radio_window()
 	int width = screen_width;
 	int starty = 0;
 	int startx = 0;
-	radio_window = newwin(height, width, starty, startx);
-	werase(radio_window);
-	box(radio_window, 0, 0);
-	mvwprintw(radio_window, 0, 2, "Radio");
-	mvwprintw(radio_window, 4, (width / 2) - 15, "Choose a radio stream to play");
-	mvwprintw(radio_window, 5, (width / 2) - 15, "=============================");
-	mvwprintw(radio_window, 8, 1, "Radio 1 Classics");
-	mvwprintw(radio_window, 9, 1, "StuBru Untz");
-	mvwprintw(radio_window, 10, 1, "Radio FG");
-	wrefresh(radio_window);
+	F5.window = newwin(height, width, starty, startx);
+	werase(F5.window);
+	box(F5.window, 0, 0);
+	mvwprintw(F5.window, 0, 2, F5.name);
+	mvwprintw(F5.window, 4, (width / 2) - 15, "Choose a radio stream to play");
+	mvwprintw(F5.window, 5, (width / 2) - 15, "=============================");
+	mvwprintw(F5.window, 8, 1, "Radio 1 Classics");
+	mvwprintw(F5.window, 9, 1, "StuBru Untz");
+	mvwprintw(F5.window, 10, 1, "Radio FG");
+	wrefresh(F5.window);
 }
 

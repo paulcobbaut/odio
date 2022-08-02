@@ -3,6 +3,7 @@
 
 #include "global.h"
 #include "help.h"
+#include "news.h"
 #include "menu.h"
 #include "radio.h"
 #include "myncurses.h"
@@ -33,6 +34,7 @@ int handle_user_input()
 			display_bottom_menu(7);
 			break;
 			case KEY_F(8):
+			display_news_window();
 			display_bottom_menu(8);
 			break;
 			case KEY_F(9):

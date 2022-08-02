@@ -25,13 +25,13 @@ int display_bottom_menu(int function_key)
 		case 5:			// F5=Radio
 		active_window = 2;
 		break;
-		case 6:			// F5=Local
+		case 6:			// F6=Local
 		active_window = 3;
 		break;
 		case 7:			// F7=List
 		active_window = 4;
 		break;
-		case 8:			// F7=List
+		case 8:			// F8=News
 		active_window = 5;
 		break;
 		case 9:			// F9=Silence
