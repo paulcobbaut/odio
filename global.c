@@ -1,12 +1,8 @@
 #include <ncurses.h>
 #include "global.h" 
 
-// global variables for screen height and width
-//int screen_height; // character height of the screen (Y-axis)
-// int screen_width;  // character width of the screen (X-axis)
-
-// struct to contain global variables
-struct odiodata data = {.screen_width = 0, .screen_height = 0, .active_window = 1};
+// struct to contain all odio data
+struct odiodata data = {.screen_width = 0, .screen_height = 0, .active_window = 0};
 
 // init windows
 struct odiowindow F1 = {1, "Help"};
