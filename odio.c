@@ -14,7 +14,7 @@ int main()
 	start_ncurses();
 
 	// first find total screen size
-	getmaxyx(stdscr, screen_height, screen_width);
+	getmaxyx(stdscr, data.screen_height, data.screen_width);
 
 	// display menu at the bottom
 	display_bottom_menu(99);

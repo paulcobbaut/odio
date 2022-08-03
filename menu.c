@@ -42,7 +42,7 @@ int display_bottom_menu(int function_key)
 		break;
 	}
 	// array of all function keys
-        char * fkeys[7] = {"F1=Help","F3=Exit","F5=Radio","F6=Local","F7=List","F8=News","F9=Silence"}; 
+        char * fkeys[7] = {"F1=Help","F3=Exit","F5=Radio","F6=Files","F7=List","F8=News","F9=Silence"}; 
 
 	// loop through array
 	for (int i = 0; i < 7; i++)
@@ -52,7 +52,7 @@ int display_bottom_menu(int function_key)
 		else
 			pair = 1; 
 		attron(COLOR_PAIR(pair));
-		mvprintw(screen_height - 1, i * 12, fkeys[i]);
+		mvprintw(data.screen_height - 1, i * 12, fkeys[i]);
 		attroff(COLOR_PAIR(pair));
 	}
 	refresh();

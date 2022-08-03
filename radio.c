@@ -7,8 +7,8 @@
 int display_radio_window()
 {
         // radio window
-	int height = screen_height - 1;
-	int width = screen_width;
+	int height = data.screen_height - 1;
+	int width = data.screen_width;
 	int starty = 0;
 	int startx = 0;
 	F5.window = newwin(height, width, starty, startx);
