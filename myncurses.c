@@ -3,7 +3,7 @@
 
 #include "global.h"   // Global variables
 
-int start_ncurses()
+int start_and_init_this_program()
 {
 	// read configuration
 	FILE *configfile;

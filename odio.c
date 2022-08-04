@@ -1,20 +1,17 @@
 #include <stdlib.h>
 #include <string.h>
-#include <stdlib.h>
 #include <ncurses.h>
 
-
-#include "global.h"   // Global variables
-#include "help.h"     // F1-Help
-#include "menu.h"     // The menu at the bottom of the screen
+#include "global.h"    // Global variables
+#include "help.h"      // F1-Help
+#include "menu.h"      // The menu at the bottom of the screen
 #include "input.h"     // handle user input
-#include "myncurses.h"  // The menu at the bottom of the screen
-
+#include "myncurses.h" // The menu at the bottom of the screen
 
 int main()
 {
-	// start ncurses
-	start_ncurses();
+	// start program, read configuration, init ncurses
+	start_and_init_this_program();
 
 	// first find total screen size
 	getmaxyx(stdscr, data.screen_height, data.screen_width);
