@@ -2,7 +2,7 @@
 #include "global.h" 
 
 // struct to contain all odio data
-struct odiodata data = {.screen_width = 0, .screen_height = 0, .active_window = 0};
+struct odiodata data = {.screen_width = 0, .screen_height = 0, .active_window = 0, .configfilename = "odio.cfg"};
 
 // init windows
 struct odiowindow F1 = {1, "Help"};

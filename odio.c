@@ -1,12 +1,15 @@
 #include <stdlib.h>
 #include <string.h>
+#include <stdlib.h>
 #include <ncurses.h>
+
 
 #include "global.h"   // Global variables
 #include "help.h"     // F1-Help
 #include "menu.h"     // The menu at the bottom of the screen
 #include "input.h"     // handle user input
 #include "myncurses.h"  // The menu at the bottom of the screen
+
 
 int main()
 {
@@ -23,6 +26,6 @@ int main()
 	handle_user_input();
 
 	// close ncurses
-	endwin();
+	save_and_exit_this_program();
 	return 0;
 }

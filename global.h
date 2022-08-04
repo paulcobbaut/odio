@@ -6,6 +6,7 @@ struct odiodata {
 	int screen_height;
 	int screen_width;
 	int active_window;
+	char configfilename[9];
 };
 
 extern struct odiodata data;

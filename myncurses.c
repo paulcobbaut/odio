@@ -5,6 +5,13 @@
 
 int start_ncurses()
 {
+	// read configuration
+	FILE *configfile;
+	configfile = fopen(data.configfilename, "r");
+	fscanf(configfile,"%d",&data.active_window);
+	fclose(configfile);
+
+	// init ncurses
 	initscr();		// init ncurses
 	cbreak();
 	noecho();
@@ -15,7 +22,13 @@ int start_ncurses()
 
 int save_and_exit_this_program()
 {
-	// todo... save playlist? save config?
+	// write configuration
+	FILE *configfile;
+	configfile = fopen(data.configfilename, "w");
+	if(configfile == NULL) { printf("error"); };
+	fprintf(configfile,"%d",data.active_window);
+	fclose(configfile);
+
 	// end ncurses
 	endwin();
 	exit(0);

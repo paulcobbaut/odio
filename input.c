@@ -23,7 +23,7 @@ int handle_user_input()
 				display_bottom_menu();
 				break;
 			case KEY_F(3):
-				data.active_window = 1;
+				//data.active_window = 1;    // not very useful to retain
 				save_and_exit_this_program();
 				display_bottom_menu();
 				break;
