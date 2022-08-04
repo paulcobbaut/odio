@@ -6,7 +6,7 @@
 #include "help.h"      // F1-Help
 #include "menu.h"      // The menu at the bottom of the screen
 #include "input.h"     // handle user input
-#include "myncurses.h" // The menu at the bottom of the screen
+#include "myncurses.h" // start/stop program
 
 int main()
 {
@@ -19,7 +19,7 @@ int main()
 	// display menu at the bottom
 	display_bottom_menu(99);
 
-	// handle keyboard input form the user
+	// handle keyboard input from the user
 	handle_user_input();
 
 	// close ncurses
