@@ -1,12 +1,15 @@
 #ifndef GLOBAL_DOT_H
 #define GLOBAL_DOT_H
 
+#include <mpv/client.h>
+
 // keep all data for odio in this struct
 struct odiodata {
 	int screen_height;
 	int screen_width;
 	int active_window;
 	char configfilename[9];
+	mpv_handle *ctx;
 };
 
 extern struct odiodata data;
